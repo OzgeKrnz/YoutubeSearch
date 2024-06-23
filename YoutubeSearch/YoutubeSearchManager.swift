@@ -19,7 +19,8 @@ struct YoutubeSearchManager{
     
     func fetchData(query:String){
         let apiKey = "AIzaSyAR3NgF2ZMbHWTAIXPpVGvx76oDgPDQcGI"
-        let urlString = "\(dataUrl)&q=\(query)&type=video&key=\(apiKey)"
+        let urlString = "\(dataUrl)&q=\(query)&type=video&key=\(apiKey)&maxResults=50"
+     
         performRequest(urlString: urlString)
         print(urlString)
         
@@ -42,6 +43,8 @@ struct YoutubeSearchManager{
             task.resume()
         }
     }
+    
+
     
     func parseJSON(_ searchData: Data) -> [YouTubeSearchData]? {
         let decoder = JSONDecoder()

@@ -10,13 +10,11 @@ import WebKit
 
 class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate, UITableViewDataSource,YoutubeSearchDelegate{
     @IBOutlet weak var videoPlayerView: WKWebView!
-    
-    
-    
-    
     @IBOutlet weak var searchBar: UITextField!
     @IBOutlet weak var searchButton: UIButton!
     @IBOutlet weak var tableView: UITableView!
+    
+    
     var youtubeSearchManager = YoutubeSearchManager()
     var youtubeSearchData: [YouTubeSearchData] = []
     var videoUrl:String = ""
@@ -30,12 +28,16 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         tableView.delegate=self
         tableView.dataSource=self
         tableView.alwaysBounceVertical = true // kaydırılabilir
+        videoPlayerView.backgroundColor = .white
         
-        videoPlayerView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(videoPlayerView)
+        
+        searchBar.autocorrectionType = .no
 
         
+        
     }
+
     
     @IBAction func searchButtonClicked(_ sender:UIButton) {
         let searchedText = searchBar.text!
@@ -102,4 +104,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         let req = URLRequest(url:url)
         videoPlayerView.load(req)
     }
+
+
 }

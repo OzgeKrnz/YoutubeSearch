@@ -64,7 +64,7 @@
 			children = (
 				B0955EBF2BFA567C0025266D /* AppDelegate.swift */,
 				B0955EC12BFA567C0025266D /* SceneDelegate.swift */,
-				B0955EC32BFA567C0025266D /* ViewController.swift */,
+				B0F575D82C1F23B800477A6A /* Controller */,
 				B0955EC52BFA567C0025266D /* Main.storyboard */,
 				B0955EC82BFA567D0025266D /* Assets.xcassets */,
 				B0955ECA2BFA567D0025266D /* LaunchScreen.storyboard */,
@@ -74,6 +74,14 @@
 				B05EF1172BFB8B2F00838B10 /* YoutubeSearchManager.swift */,
 			);
 			path = YoutubeSearch;
+			sourceTree = "<group>";
+		};
+		B0F575D82C1F23B800477A6A /* Controller */ = {
+			isa = PBXGroup;
+			children = (
+				B0955EC32BFA567C0025266D /* ViewController.swift */,
+			);
+			path = Controller;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
