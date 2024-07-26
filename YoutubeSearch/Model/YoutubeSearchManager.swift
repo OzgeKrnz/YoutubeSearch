@@ -17,6 +17,7 @@ struct YoutubeSearchManager{
     
     var delegate: YoutubeSearchDelegate?
     
+    // url olusturmak icin
     func fetchData(query:String){
         let apiKey = "AIzaSyAR3NgF2ZMbHWTAIXPpVGvx76oDgPDQcGI"
         let urlString = "\(dataUrl)&q=\(query)&type=video&key=\(apiKey)&maxResults=50"
@@ -26,6 +27,7 @@ struct YoutubeSearchManager{
         
     }
     
+    // parametreden url olusturmak ve urlsession ile istek atmak icin
     func performRequest(urlString: String) {
         if let url = URL(string: urlString) {
             let session = URLSession(configuration: .default)
@@ -44,7 +46,6 @@ struct YoutubeSearchManager{
         }
     }
     
-
     
     func parseJSON(_ searchData: Data) -> [YouTubeSearchData]? {
         let decoder = JSONDecoder()

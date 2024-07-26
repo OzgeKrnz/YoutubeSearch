@@ -22,7 +22,7 @@ struct YouTubeSearchData: Codable {
         return URL(string: snippet.thumbnails.medium.url)
     }
     
-    
+
     
 }
 
@@ -46,8 +46,7 @@ struct VideoId: Codable{
 
 
 
-
-// title decode etme
+// data decode etme
 extension String {
     func decodeHTML() -> String {
         guard let data = self.data(using: .utf8) else { return self }
@@ -59,4 +58,5 @@ extension String {
         return attributedString.string
     }
 }
+
 

@@ -21,7 +21,6 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view.
         searchBar.textAlignment = .left
         searchBar.delegate = self
         youtubeSearchManager.delegate = self
@@ -32,10 +31,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         
         view.addSubview(videoPlayerView)
         
-        searchBar.autocorrectionType = .no
-
-        
-        
+        searchBar.autocorrectionType = .no        
     }
 
     
@@ -62,11 +58,13 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         return youtubeSearchData.count
     }
     
+    // hücre iceriginin yapılandırılması
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "VideoCell", for: indexPath)
         let result = youtubeSearchData[indexPath.row]
         cell.textLabel?.text = result.title
-        cell.textLabel?.numberOfLines = 0 // Allow multiple lines
+        cell.textLabel?.numberOfLines = 0
+        // img indirme
         if let thumbnailURL = result.thumbnailURL {
             DispatchQueue.global().async {
                 if let data = try? Data(contentsOf: thumbnailURL) {
@@ -86,8 +84,8 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
         let videoId = selectedVideo.id.videoId
         videoUrl = "https://www.youtube.com/embed/\(videoId)"
         watchVideo(videoUrl: videoUrl)
-        
     }
+    
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
          return 80 // Hücre yüksekliği
      }
@@ -100,6 +98,7 @@ class ViewController: UIViewController, UITextFieldDelegate, UITableViewDelegate
 
  
     func watchVideo(videoUrl:String){
+        // kosullu işlemlerde hızlı sonuc almak icin guard kullanılır
         guard let url = URL(string: videoUrl) else {return}
         let req = URLRequest(url:url)
         videoPlayerView.load(req)
