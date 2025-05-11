@@ -17,12 +17,4 @@ A simple iOS application that allows users to search for YouTube videos using th
 - **JSONDecoder** for parsing API responses
 - **YouTube Data API v3**
 
-## 🖼️ Screenshots
 
-> *(You can insert screenshots here by dragging images into this section or using Markdown image tags)*
-
-## 🚧 Installation & Setup
-
-1. Clone the repository:
-   ```bash
-   git clone https://github.com/yourusername/youtube-search-app.git
