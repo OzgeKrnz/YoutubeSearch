@@ -19,7 +19,6 @@ struct YoutubeSearchManager{
     
     // url olusturmak icin
     func fetchData(query:String){
-        let apiKey = "AIzaSyAR3NgF2ZMbHWTAIXPpVGvx76oDgPDQcGI"
         guard let apiKey = getApiKey() else{
             print("Api key not found")
             return
