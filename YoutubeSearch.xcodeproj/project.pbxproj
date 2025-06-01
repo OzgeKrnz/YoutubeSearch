@@ -16,6 +16,7 @@
 		B0955EC92BFA567D0025266D /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = B0955EC82BFA567D0025266D /* Assets.xcassets */; };
 		B0955ECC2BFA567D0025266D /* Base in Resources */ = {isa = PBXBuildFile; fileRef = B0955ECB2BFA567D0025266D /* Base */; };
 		B0955ED42BFA5C320025266D /* youtube.png in Resources */ = {isa = PBXBuildFile; fileRef = B0955ED32BFA5C320025266D /* youtube.png */; };
+		B0D73A872DECCC8B00F5E364 /* Secrets.plist in Resources */ = {isa = PBXBuildFile; fileRef = B0D73A862DECCC8B00F5E364 /* Secrets.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		B0955ECB2BFA567D0025266D /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		B0955ECD2BFA567D0025266D /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B0955ED32BFA5C320025266D /* youtube.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = youtube.png; sourceTree = "<group>"; };
+		B0D73A862DECCC8B00F5E364 /* Secrets.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Secrets.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,6 +90,7 @@
 				B0955ECD2BFA567D0025266D /* Info.plist */,
 				B0955ED32BFA5C320025266D /* youtube.png */,
 				B078266D2C53F67E00B982D3 /* Model */,
+				B0D73A862DECCC8B00F5E364 /* Secrets.plist */,
 			);
 			path = YoutubeSearch;
 			sourceTree = "<group>";
@@ -159,6 +162,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				B0955EC92BFA567D0025266D /* Assets.xcassets in Resources */,
+				B0D73A872DECCC8B00F5E364 /* Secrets.plist in Resources */,
 				B0955ECC2BFA567D0025266D /* Base in Resources */,
 				B0955EC72BFA567C0025266D /* Base in Resources */,
 				B0955ED42BFA5C320025266D /* youtube.png in Resources */,

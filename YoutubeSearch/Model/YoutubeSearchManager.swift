@@ -20,6 +20,10 @@ struct YoutubeSearchManager{
     // url olusturmak icin
     func fetchData(query:String){
         let apiKey = "AIzaSyAR3NgF2ZMbHWTAIXPpVGvx76oDgPDQcGI"
+        guard let apiKey = getApiKey() else{
+            print("Api key not found")
+            return
+        }
         let urlString = "\(dataUrl)&q=\(query)&type=video&key=\(apiKey)&maxResults=50"
      
         performRequest(urlString: urlString)
@@ -57,5 +61,16 @@ struct YoutubeSearchManager{
             delegate?.didFailWithError(error: error)
             return nil
         }
+    }
+    
+    //MARK: - API Key okuma
+    func getApiKey()->String?{
+        if let path = Bundle.main.path(forResource: "Secrets", ofType: "plist"),
+           let dict = NSDictionary(contentsOfFile: path),
+           let key = dict["YOUTUBE_API_KEY"] as? String{
+            return key
+        }
+        return nil
+        
     }
 }
